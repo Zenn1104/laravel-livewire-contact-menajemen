@@ -8,6 +8,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', App\Livewire\Home::class)->name('home');
+    Route::get('/contact/{contact}', App\Livewire\Contact\Show::class)->name('contact.show');
 });
 
 Route::middleware('guest')->group(function () {

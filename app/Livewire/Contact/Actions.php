@@ -30,7 +30,7 @@ class Actions extends Component
     public function deleteContact(Contact $contact)
     {
         $contact->delete();
-        $this->dispatch('reload');
+        $this->redirect(route('home'), navigate:true);
     }
 
     public function closeModal()
